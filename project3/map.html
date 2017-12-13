@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<!-- 
+    Student Name:
+-->
+<html lang="en">
+  <head>
+    <title>Web Mashup: Display House Prices on a Map</title>
+    <meta charset="utf-8"/>
+    <script type="text/javascript" src="map.js"></script>
+    <script type="text/javascript"
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBAbDWn-6RF57AbYDowsOa25IqxXCb19MA&callback=initMap" async defer>
+    </script>
+  </head>
+  <body onload="initialize();">
+	<form id="searchAddress">
+       <label><b>Postal address:</b> <input type="text" id="address"/></label>
+       <input type="button" onclick="sendRequest();" value="Find"/>
+	    <input type="button" id="clear" value="Clear"/>
+    </form><br/>
+	<div id="output">&nbsp;</div>
+    <div id="map" style="width: 600px; height: 500px;"></div><br/>
+	<b>Search History:</b><br>
+		<textarea id="history" rows="10" cols="70" style='font-size:120%;'>
+		</textarea>
+    
+  </body>
+</html>
